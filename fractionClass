@@ -1,0 +1,133 @@
+ int main()
+{
+	serialnumber t1, t3, t2 , t4;
+
+	t1.getserial();
+	t2.getserial();
+	t3.getserial();
+	t4.getserial();
+	return 0;
+} 
+class fraction {
+private:
+	int num;
+	int den;
+public:
+	void setfraction(int a, int b) {
+		num = a;
+		den = b;
+
+	}
+
+	void output() {
+		cout << num << "/" << den << endl;
+	}
+	void addtwo(int a, int b, int c, int d) {
+		if (b == d)
+		{
+			cout << a + c << "/" << b;
+		}
+		else {
+			int ad = a * d;
+			int bd = b * d;
+			int cb = c * b;
+			cout << ad + cb << "/" << bd;
+		}
+	}
+	void simplify(int a, int b) {
+		int c = b;
+		int d = a;
+		for (int i = 0; i < 10; i++)
+		{
+			if (a % 2 == 0 && b % 2 == 0)
+			{
+				a = a / 2;
+				b = b / 2;
+
+			}
+			else 	if (a % 3 == 0 && b % 3 == 0)
+			{
+				a = a / 3;
+				b = b / 3;
+
+			}
+			else	if (a % 5 == 0 && b % 5 == 0)
+			{
+				a = a / 5;
+				b = b / 5;
+
+			}
+			else 	if (a % 7 == 0 && b % 7 == 0)
+			{
+				a = a / 5;
+				b = b / 5;
+
+			}
+
+		}
+
+	}
+
+	void mul(int i) {
+		int a;
+		int b;
+		for (int o = 1; o < i; o++)
+		{
+			cout << "\t" << o << "/" << i;
+		}cout << endl;
+		for (int l = 0; l < i; l++)
+		{
+			cout << "--------";
+		}cout << endl;
+		for (int j = 1; j < i; j++)
+		{
+
+			for (int k = 1; k < i; k++)
+			{
+
+
+				a = j * k;
+				b = i * i;
+
+				for (int i = 0; i < 10; i++)
+				{
+
+					if (a % 2 == 0 && b % 2 == 0)
+					{
+						a = a / 2;
+						b = b / 2;
+
+					}
+					else 	if (a % 3 == 0 && b % 3 == 0)
+					{
+						a = a / 3;
+						b = b / 3;
+
+					}
+					else	if (a % 5 == 0 && b % 5 == 0)
+					{
+						a = a / 5;
+						b = b / 5;
+
+					}
+					else 	if (a % 7 == 0 && b % 7 == 0)
+					{
+						a = a / 5;
+						b = b / 5;
+
+					}
+					//cout << "\t" << j * k << "/" << i * i;
+
+				} cout << "\t" << a << "/" << b;
+			}  cout << "\t|" << j << "/" << i; cout << endl;
+		}
+	}
+
+
+};
+
+int main(){
+fraction f1;
+	f1.mul(7);
+  return 0 ;
+}
